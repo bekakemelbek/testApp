@@ -1,27 +1,27 @@
 package kz.beksultan.test.testapp.network.Model
 
-data class GamesResponse(val total:Int,
-                        val top:List<Games>)
+data class MoviesResponse(val created_by:String,
+                          val description:String,
+                          val favorite_count:Int,
+                          val id:Int,
+                          val items:List<Movie>,
+                          val item_count:Int,
+                          val iso_639_1:String,
+                          val name:String,
+                          val poster_path:String)
 
-data class Games(val game:Game,
-                 val viewers:Int,
-                 val channels:Int)
-
-data class Game(val name:String,
-                val id:Long,
-                val giantbomb_id:Long,
-                val box:Size,
-                val logo:Size,
-                val localized_name:String,
-                val locale:String)
-
-data class Size(val large:String,
-                val medium:String,
-                val small:String,
-                val template:String)
-
-data class GameListResponse<out T>(val error:String?,
-                                   val status:Int?,
-                                   val message:String?,
-                                   val data:T?)
-
+data class Movie(val poster_path:String,
+                 val popularity:Double,
+                 val vote_count:Int,
+                 val video:Boolean,
+                 val media_type:String,
+                 val id:Int,
+                 val adult:Boolean,
+                 val backdrop_path:String,
+                 val original_language:String,
+                 val original_title:String,
+                 val genre_ids:List<Int>,
+                 val title:String,
+                 val vote_average:String,
+                 val overview:String,
+                 val release_date:String)
